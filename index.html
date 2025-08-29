@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andhar Indi Baptista</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Aktifkan dark mode class
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-800 shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center py-4">
+      <h1 class="text-2xl font-bold text-green-600 dark:text-green-400">Andhar Indi Baptista</h1>
+      
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="#about" class="hover:text-green-600 dark:hover:text-green-400">Tentang</a></li>
+        <li><a href="#projects" class="hover:text-green-600 dark:hover:text-green-400">Proyek</a></li>
+        <li><a href="#certificates" class="hover:text-green-600 dark:hover:text-green-400">Sertifikat</a></li>
+        <li><a href="#contact" class="hover:text-green-600 dark:hover:text-green-400">Kontak</a></li>
+      </ul>
+
+      <!-- Dark Mode Toggle -->
+      <button id="darkToggle" class="ml-4 text-xl">
+        🌙
+      </button>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden focus:outline-none ml-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-md">
+      <ul class="flex flex-col space-y-4 p-6 font-medium">
+        <li><a href="#about" class="hover:text-green-600 dark:hover:text-green-400">Tentang</a></li>
+        <li><a href="#projects" class="hover:text-green-600 dark:hover:text-green-400">Proyek</a></li>
+        <li><a href="#certificates" class="hover:text-green-600 dark:hover:text-green-400">Sertifikat</a></li>
+        <li><a href="#contact" class="hover:text-green-600 dark:hover:text-green-400">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="pt-32 pb-16 text-center">
+    <img src="poto.jpg" alt="Foto Andhar" class="mx-auto rounded-full w-40 h-40 object-cover shadow-lg">
+    <h2 class="text-3xl font-bold mt-6">Halo, Saya Andhar Indi Baptista</h2>
+    <p class="text-gray-600 dark:text-gray-300 mt-2">Mahasiswa Teknik Informatika | Web Developer | UI/UX Designer</p>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">Tentang Saya</h2>
+    <p>Saya memiliki minat di bidang UI/UX dan pengembangan web. 
+       Terbiasa menggunakan HTML, CSS, JavaScript, serta framework modern seperti Tailwind CSS.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-gray-100 dark:bg-gray-800 px-6 py-12">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">Contoh Proyek</h2>
+      <ul class="space-y-3 list-disc list-inside">
+        <!-- <li><a href="#" class="text-green-600 dark:text-green-400 hover:underline">Chatbot Kesehatan Mental</a></li> -->
+        <li><a href="contoh.html" class="text-green-600 dark:text-green-400 hover:underline">Desain UI Aplikasi Mobile</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-green-600 dark:text-green-400 mb-8 text-center">Sertifikat Keterampilan</h2>
+    
+    <div class="flex flex-col items-center">
+      <!-- Sertifikat -->
+      <div class="border rounded-lg shadow hover:shadow-lg transition dark:border-gray-700 max-w-sm w-full cursor-pointer"
+           onclick="openModal('sertif1.png')">
+        <img src="sertif1.png" alt="Sertifikat 1" 
+             class="w-full h-auto rounded-t-lg transform transition duration-300 hover:scale-105">
+        <p class="p-4 text-center">Sertifikat UI/UX Design</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center z-50">
+    <span class="absolute top-4 right-6 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" class="max-w-3xl w-auto max-h-[90vh] rounded-lg shadow-lg">
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-100 dark:bg-gray-800 px-6 py-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">Kontak</h2>
+      <p>
+        Email: 
+        <a href="mailto:andhar.html@email.com" 
+           class="text-green-600 dark:text-green-400 hover:underline">
+           andhar.html@email.com
+        </a>
+      </p>
+      <p>
+        LinkedIn: 
+        <a href="https://www.linkedin.com/in/andhar-indi-baptista-46ab8b37b" 
+           target="_blank" 
+           class="text-green-600 dark:text-green-400 hover:underline">
+           Andhar Indi Baptista
+        </a>
+      </p>
+      <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">
+        © 2025 Andhar Indi Baptista. Dibuat dengan GitHub Pages.
+      </p>
+    </div>
+  </section>
+ <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-4">Andhar Indi Baptista</h3>
+      <p class="mb-6">Mahasiswa Teknik Informatika | Web Developer | UI/UX Designer</p>
+      
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="mailto:andhar.html@email.com" class="text-gray-300 hover:text-green-400 transition duration-300">
+          <i class="fas fa-envelope text-2xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/andhar-indi-baptista-46ab8b37b" target="_blank" class="text-gray-300 hover:text-green-400 transition duration-300">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="https://github.com/AndharIndiBaptista" class="text-gray-300 hover:text-green-400 transition duration-300">
+          <i class="fab fa-github text-2xl"></i>
+        </a>
+      </div>
+      
+      <p class="text-sm text-gray-400">© 2025 Andhar Indi Baptista. Dibuat dengan GitHub Pages.</p>
+    </div>
+  </footer>
+  <!-- Script Toggle -->
+  <script>
+    // Smooth scroll untuk link anchor
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+
+    // Navbar shadow saat scroll
+    const navbar = document.querySelector("nav");
+    window.addEventListener("scroll", () => {
+      if(window.scrollY > 50){
+        navbar.classList.add("shadow-lg", "bg-opacity-95");
+      } else {
+        navbar.classList.remove("shadow-lg", "bg-opacity-95");
+      }
+    });
+
+    // Scroll reveal animation
+    const reveals = document.querySelectorAll("section, header, footer");
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 100;
+      reveals.forEach(el => {
+        const revealTop = el.getBoundingClientRect().top;
+        if (revealTop < windowHeight - revealPoint) {
+          el.classList.add("opacity-100", "translate-y-0");
+        } else {
+          el.classList.remove("opacity-100", "translate-y-0");
+        }
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+
+    // Tambahkan class default untuk animasi fade-in
+    reveals.forEach(el => {
+      el.classList.add("opacity-0", "translate-y-10", "transition-all", "duration-700");
+    });
+
+    // Back to top button
+    const backToTop = document.createElement("button");
+    backToTop.innerHTML = "⬆️";
+    backToTop.className = "fixed bottom-6 right-6 p-3 bg-green-600 text-white rounded-full shadow-lg hidden";
+    document.body.appendChild(backToTop);
+
+    window.addEventListener("scroll", () => {
+      if(window.scrollY > 300){
+        backToTop.classList.remove("hidden");
+      } else {
+        backToTop.classList.add("hidden");
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Toggle menu mobile
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById("darkToggle");
+    const html = document.documentElement;
+
+    // Load preferensi dari localStorage
+    if(localStorage.theme === "dark"){
+      html.classList.add("dark");
+      darkToggle.textContent = "☀️";
+    }
+
+    darkToggle.addEventListener("click", () => {
+      if(html.classList.contains("dark")){
+        html.classList.remove("dark");
+        darkToggle.textContent = "🌙";
+        localStorage.theme = "light";
+      } else {
+        html.classList.add("dark");
+        darkToggle.textContent = "☀️";
+        localStorage.theme = "dark";
+      }
+    });
+
+    function openModal(imgSrc) {
+      document.getElementById("modalImage").src = imgSrc;
+      document.getElementById("imageModal").classList.remove("hidden");
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").classList.add("hidden");
+    }
+
+    // Tutup modal dengan klik di luar gambar
+    document.getElementById("imageModal").addEventListener("click", function(e) {
+      if (e.target.id === "imageModal") {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desain UI Aplikasi Mobile - Andhar Indi Baptista</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .hero-pattern {
+      background-color: #4ade80;
+      background-image: radial-gradient(circle at center center, #86efac, #4ade80), repeating-radial-gradient(circle at center center, #86efac, #86efac, 10px, transparent 20px, transparent 10px);
+      background-blend-mode: multiply;
+    }
+    
+    .screenshot-container {
+      perspective: 1000px;
+    }
+    
+    .screenshot-item {
+      transition: transform 0.5s ease;
+    }
+    
+    .screenshot-item:hover {
+      transform: translateZ(20px) rotateY(5deg);
+    }
+    
+    .design-process-step {
+      border-left: 3px solid #4ade80;
+      transition: all 0.3s ease;
+    }
+    
+    .design-process-step:hover {
+      border-left: 3px solid #22c55e;
+      background-color: rgba(74, 222, 128, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-800 shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center py-4">
+      <a href="index.html" class="text-2xl font-bold text-green-600 dark:text-green-400 flex items-center">
+        <i class="fas fa-arrow-left mr-2"></i> Andhar Indi Baptista
+      </a>
+
+      <!-- Dark Mode Toggle -->
+      <button id="darkToggle" class="ml-4 text-xl">
+        🌙
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-pattern pt-32 pb-20 px-6 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Desain UI Aplikasi Mobile</h1>
+      <p class="text-xl opacity-90">Sebuah aplikasi kesehatan mental dengan pendekatan desain yang user-friendly dan modern</p>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">Gambaran Proyek</h2>
+          <p class="mb-4">Aplikasi ini dirancang untuk membantu pengguna dalam memantau dan meningkatkan kesehatan mental mereka melalui fitur-fitur seperti pelacakan mood, meditasi terpandu, dan konsultasi dengan profesional.</p>
+          <p>Tujuan dari desain ini adalah menciptakan pengalaman pengguna yang nyaman, intuitif, dan memberikan rasa tenang melalui pemilihan warna, tipografi, dan tata letak yang tepat.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4">Detail Proyek</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <i class="fas fa-user-circle text-green-600 dark:text-green-400 mr-3"></i>
+              <span><strong>Klien:</strong> Startup Kesehatan Mental</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-calendar text-green-600 dark:text-green-400 mr-3"></i>
+              <span><strong>Waktu:</strong> ? Bulan</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-palette text-green-600 dark:text-green-400 mr-3"></i>
+              <span><strong>Tools:</strong> Figma</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-tags text-green-600 dark:text-green-400 mr-3"></i>
+              <span><strong>Kategori:</strong> UI/UX Design, Mobile App</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="py-16 bg-gray-100 dark:bg-gray-800 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-green-600 dark:text-green-400 mb-2 text-center">Tampilan UI</h2>
+      <p class="text-center mb-10">Beberapa screenshot dari berbagai layar aplikasi</p>
+      
+      <div class="screenshot-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="screenshot-item bg-white dark:bg-gray-700 rounded-xl shadow-lg p-2">
+          <img src="https://placehold.co/300x600/4ade80/white?text=Login+Screen" alt="Login Screen" class="rounded-lg w-full h-auto">
+          <p class="text-center mt-3 font-medium">Layar Login</p>
+        </div>
+        <div class="screenshot-item bg-white dark:bg-gray-700 rounded-xl shadow-lg p-2">
+          <img src="https://placehold.co/300x600/86efac/000?text=Dashboard" alt="Dashboard" class="rounded-lg w-full h-auto">
+          <p class="text-center mt-3 font-medium">Dashboard</p>
+        </div>
+        <div class="screenshot-item bg-white dark:bg-gray-700 rounded-xl shadow-lg p-2">
+          <img src="https://placehold.co/300x600/bbf7d0/000?text=Meditation" alt="Meditation" class="rounded-lg w-full h-auto">
+          <p class="text-center mt-3 font-medium">Meditasi</p>
+        </div>
+        <div class="screenshot-item bg-white dark:bg-gray-700 rounded-xl shadow-lg p-2">
+          <img src="https://placehold.co/300x600/dcfce7/000?text=Mood+Tracker" alt="Mood Tracker" class="rounded-lg w-full h-auto">
+          <p class="text-center mt-3 font-medium">Pelacak Mood</p>
+        </div>
+        <div class="screenshot-item bg-white dark:bg-gray-700 rounded-xl shadow-lg p-2">
+          <img src="https://placehold.co/300x600/f0fdf4/000?text=Profile" alt="Profile" class="rounded-lg w-full h-auto">
+          <p class="text-center mt-3 font-medium">Profil</p>
+        </div>
+        <div class="screenshot-item bg-white dark:bg-gray-700 rounded-xl shadow-lg p-2">
+          <img src="https://placehold.co/300x600/ecfdf5/000?text=Settings" alt="Settings" class="rounded-lg w-full h-auto">
+          <p class="text-center mt-3 font-medium">Pengaturan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Process -->
+  <section class="py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-green-600 dark:text-green-400 mb-2 text-center">Proses Desain</h2>
+      <p class="text-center mb-10">Langkah-langkah yang saya ambil dalam merancang aplikasi ini</p>
+      
+      <div class="space-y-6">
+        <div class="design-process-step p-6 rounded-r-lg">
+          <div class="flex items-start">
+            <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-full mr-4">
+              <i class="fas fa-lightbulb text-green-600 dark:text-green-400 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Research & Ideation</h3>
+              <p>Melakukan penelitian tentang kebutuhan pengguna aplikasi kesehatan mental, menganalisis aplikasi serupa yang sudah ada, dan mengumpulkan ide-ide untuk solusi desain.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="design-process-step p-6 rounded-r-lg">
+          <div class="flex items-start">
+            <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-full mr-4">
+              <i class="fas fa-pencil-alt text-green-600 dark:text-green-400 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Wireframing</h3>
+              <p>Membuat wireframe untuk menentukan tata letak dasar dan alur navigasi aplikasi. Fokus pada usability dan struktur informasi sebelum masuk ke aspek visual.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="design-process-step p-6 rounded-r-lg">
+          <div class="flex items-start">
+            <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-full mr-4">
+              <i class="fas fa-paint-brush text-green-600 dark:text-green-400 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">UI Design</h3>
+              <p>Mengaplikasikan elemen visual seperti warna, tipografi, ikon, dan komponen UI untuk menciptakan antarmuka yang menarik dan sesuai dengan brand identity.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="design-process-step p-6 rounded-r-lg">
+          <div class="flex items-start">
+            <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-full mr-4">
+              <i class="fas fa-user-check text-green-600 dark:text-green-400 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Testing & Iteration</h3>
+              <p>Melakukan usability testing dengan pengguna potensial, mengumpulkan feedback, dan melakukan iterasi desain untuk meningkatkan pengalaman pengguna.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Color Palette -->
+  <section class="py-16 bg-gray-100 dark:bg-gray-800 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-green-600 dark:text-green-400 mb-2 text-center">Palet Warna</h2>
+      <p class="text-center mb-10">Pemilihan warna yang mencerminkan ketenangan dan profesionalisme</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-green-600 rounded-lg p-6 text-white text-center">
+          <p class="font-semibold">Primary</p>
+          <p>#4ADE80</p>
+        </div>
+        <div class="bg-green-400 rounded-lg p-6 text-center">
+          <p class="font-semibold">Secondary</p>
+          <p>#86EFAC</p>
+        </div>
+        <div class="bg-green-800 rounded-lg p-6 text-white text-center">
+          <p class="font-semibold">Dark</p>
+          <p>#166534</p>
+        </div>
+        <div class="bg-green-100 rounded-lg p-6 text-center">
+          <p class="font-semibold">Light</p>
+          <p>#DCFCE7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Portfolio -->
+  <section class="py-16 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6">Tertarik dengan karya saya?</h2>
+      <a href="index.html" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+        <i class="fas fa-arrow-left mr-2"></i> Kembali ke Portfolio
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-4">Andhar Indi Baptista</h3>
+      <p class="mb-6">Mahasiswa Teknik Informatika | Web Developer | UI/UX Designer</p>
+      
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="mailto:andhar.html@email.com" class="text-gray-300 hover:text-green-400 transition duration-300">
+          <i class="fas fa-envelope text-2xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/andhar-indi-baptista-46ab8b37b" target="_blank" class="text-gray-300 hover:text-green-400 transition duration-300">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="https://github.com/AndharIndiBaptista" class="text-gray-300 hover:text-green-400 transition duration-300">
+          <i class="fab fa-github text-2xl"></i>
+        </a>
+      </div>
+      
+      <p class="text-sm text-gray-400">© 2025 Andhar Indi Baptista. Dibuat dengan GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- Script Toggle -->
+  <script>
+    // Dark mode toggle
+    const darkToggle = document.getElementById("darkToggle");
+    const html = document.documentElement;
+
+    // Load preferensi dari localStorage
+    if(localStorage.theme === "dark"){
+      html.classList.add("dark");
+      darkToggle.textContent = "☀️";
+    }
+
+    darkToggle.addEventListener("click", () => {
+      if(html.classList.contains("dark")){
+        html.classList.remove("dark");
+        darkToggle.textContent = "🌙";
+        localStorage.theme = "light";
+      } else {
+        html.classList.add("dark");
+        darkToggle.textContent = "☀️";
+        localStorage.theme = "dark";
+      }
+    });
+  </script>
+</body>
+</html>
